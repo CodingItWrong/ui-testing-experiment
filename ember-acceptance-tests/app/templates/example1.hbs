@@ -1,0 +1,25 @@
+<button
+  {{on "click" this.showInstant}}
+  data-test-show-instant
+>
+  Show Instant
+</button>
+
+{{#if this.isShownInstant}}
+  <p data-test-message-instant>
+    This is shown instantly.
+  </p>
+{{/if}}
+
+<button
+  {{on "click" this.showDelayed}}
+  data-test-show-delayed
+>
+  Show Delayed
+</button>
+
+{{#if this.isShownDelayed}}
+  <p data-test-message-delayed>
+    This is shown after a delay
+  </p>
+{{/if}}
